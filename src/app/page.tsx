@@ -1,10 +1,16 @@
-import Image from "next/image"
+import Card from "@/components/Card/Card";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <header>
-        <Image src="/assets/images/logo.svg" width={100} height={100} alt="Logo"/>
+        <Image
+          src="/assets/images/logo.svg"
+          width={100}
+          height={100}
+          alt="Logo"
+        />
       </header>
 
       <main>
@@ -67,75 +73,45 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="limitations">
-          <h2 className="section-title">Limitations of BMI</h2>
-          <p className="section-description">
+        <section className="limitations px-7 pb-24 md:px-10 lg:px-36 ">
+          <h2 className="section-title text-[#253347] text-[2rem] font-semibold text-center">
+            Limitations of BMI
+          </h2>
+          <p className="section-description text-[#5E6E85] pt-8 pb-14 text-center">
             Although BMI is often a practical indicator of healthy weight, it is
             not suited for every person. Specific groups should carefully
             consider their BMI outcomes, and in certain cases, the measurement
             may not be beneficial to use.
           </p>
 
-          <div className="limitations-list">
-            <div>
-              <h2>
-                <Image src='/assets/images/icon-gender.svg' width={32} height={32} alt="Gender" />
-               <span>Gender</span> 
-              </h2>
-              <p>
-                The development and body fat composition of girls and boys vary
-                with age. Consequently, a child's age and gender are considered
-                when evaluating their BMI.
-              </p>
-            </div>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Card
+              icon="/assets/images/icon-gender.svg"
+              title="Gender"
+              description="The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI."
+            />
+            <Card
+              icon="/assets/images/icon-age.svg"
+              title="Age"
+              description="In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content."
+            />
 
-            <div>
-              <h2>
-                <Image src='/assets/images/icon-age.svg' width={32} height={32} alt="Age" />
-                <span>Age</span>
-              </h2>
-              <p>
-                In aging individuals, increased body fat and muscle loss may
-                cause BMI to underestimate body fat content.
-              </p>
-            </div>
+            <Card
+              icon="/assets/images/icon-muscle.svg"
+              title="Muscle"
+              description="BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat."
+            />
+            <Card
+              icon="/assets/images/icon-pregnancy.svg"
+              title="Pregnancy"
+              description="  Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child."
+            />
 
-            <div>
-              <h2>
-                <Image src='/assets/images/icon-muscle.svg' width={32} height={32} alt="Muscle" />
-                <span>Muscle</span>
-              </h2>
-              <p>
-                BMI may misclassify muscular individuals as overweight or obese,
-                as it doesn't differentiate muscle from fat.
-              </p>
-            </div>
-
-            <div>
-              <h2>
-                <Image src='/assets/images/icon-pregnancy.svg' width={32} height={32} alt="Pregnancy" />
-                <span>Pre-pregnancy</span>
-                
-              </h2>
-              <p>
-                Expectant mothers experience weight gain due to their growing
-                baby. Maintaining a healthy pre-pregnancy BMI is advisable to
-                minimise health risks for both mother and child.
-              </p>
-            </div>
-
-            <div>
-              <h2>
-              <Image src='/assets/images/icon-race.svg' width={32} height={32} alt="Race" />
-              <span>Race</span>
-                
-              </h2>
-              <p>
-                Certain health concerns may affect individuals of some Black and
-                Asian origins at lower BMIs than others. To learn more, it is
-                advised to discuss this with your GP or practice nurse.
-              </p>
-            </div>
+            <Card
+              icon="/assets/images/icon-race.svg"
+              title="Race"
+              description="Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse."
+            />
           </div>
         </section>
       </main>

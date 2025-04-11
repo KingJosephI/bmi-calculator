@@ -12,6 +12,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer components {
+  .card {
+    @apply p-6 md:p-8 rounded-2xl w-full md:w-[48%];
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+  }
+}
+
+@layer base {
+  /* h2 {
+    @apply text-[1.25rem] font-semibold
+  } */
+
+}
 
 body {
   background: var(--background);
