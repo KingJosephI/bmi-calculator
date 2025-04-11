@@ -1,7 +1,11 @@
+import Image from "next/image"
+
 export default function Home() {
   return (
     <>
-      <header></header>
+      <header>
+        <Image src="/assets/images/logo.svg" width={100} height={100} alt="Logo"/>
+      </header>
 
       <main>
         <section className="hero">
@@ -64,17 +68,20 @@ export default function Home() {
         </section>
 
         <section className="limitations">
-          <h2>Limitations of BMI</h2>
-          <p>
+          <h2 className="section-title">Limitations of BMI</h2>
+          <p className="section-description">
             Although BMI is often a practical indicator of healthy weight, it is
             not suited for every person. Specific groups should carefully
             consider their BMI outcomes, and in certain cases, the measurement
             may not be beneficial to use.
           </p>
 
-          <div>
+          <div className="limitations-list">
             <div>
-              <h2>Gender</h2>
+              <h2>
+                <Image src='/assets/images/icon-gender.svg' width={32} height={32} alt="Gender" />
+               <span>Gender</span> 
+              </h2>
               <p>
                 The development and body fat composition of girls and boys vary
                 with age. Consequently, a child's age and gender are considered
@@ -83,7 +90,10 @@ export default function Home() {
             </div>
 
             <div>
-              <h2>Age</h2>
+              <h2>
+                <Image src='/assets/images/icon-age.svg' width={32} height={32} alt="Age" />
+                <span>Age</span>
+              </h2>
               <p>
                 In aging individuals, increased body fat and muscle loss may
                 cause BMI to underestimate body fat content.
@@ -91,7 +101,10 @@ export default function Home() {
             </div>
 
             <div>
-              <h2>Muscle</h2>
+              <h2>
+                <Image src='/assets/images/icon-muscle.svg' width={32} height={32} alt="Muscle" />
+                <span>Muscle</span>
+              </h2>
               <p>
                 BMI may misclassify muscular individuals as overweight or obese,
                 as it doesn't differentiate muscle from fat.
@@ -99,9 +112,12 @@ export default function Home() {
             </div>
 
             <div>
-              <h2>Pregnancy</h2>
+              <h2>
+                <Image src='/assets/images/icon-pregnancy.svg' width={32} height={32} alt="Pregnancy" />
+                <span>Pre-pregnancy</span>
+                
+              </h2>
               <p>
-                {" "}
                 Expectant mothers experience weight gain due to their growing
                 baby. Maintaining a healthy pre-pregnancy BMI is advisable to
                 minimise health risks for both mother and child.
@@ -109,7 +125,11 @@ export default function Home() {
             </div>
 
             <div>
-              <h2>Race</h2>
+              <h2>
+              <Image src='/assets/images/icon-race.svg' width={32} height={32} alt="Race" />
+              <span>Race</span>
+                
+              </h2>
               <p>
                 Certain health concerns may affect individuals of some Black and
                 Asian origins at lower BMIs than others. To learn more, it is
